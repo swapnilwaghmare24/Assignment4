@@ -2,18 +2,26 @@ public class EmployeeWages
 {
 public static void main(String[] args)
 {
-final int EMPLOYEE_PRESENT=1;
+final int FULL_TIME=1;
+final int PART_TIME=2;
 final int WAGE_PER_HOUR=20;
-final int FULL_DAY_HOUR=8;	
+final int FULL_DAY_HOUR=8;
+final int HALF_DAY_HOUR=4;	
+
 System.out.println("Welcome to employee wage computation program");
-int empStatus=(int)(Math.random()*2);
+int empStatus=(int)(Math.random()*3);
 System.out.println(empStatus);
 int empHours=0;
 int employeeWage=0;
-if(empStatus==EMPLOYEE_PRESENT)
+if(empStatus==FULL_TIME)
 {
-	System.out.println("Employee is present");
+	System.out.println("Employee is present full time");
 	empHours=FULL_DAY_HOUR;
+}
+else if(empStatus==PART_TIME)
+{
+	System.out.println("Employee is present half day");
+	empHours=HALF_DAY_HOUR;
 }
 else
 {
