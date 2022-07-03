@@ -13,18 +13,17 @@ int empStatus=(int)(Math.random()*3);
 System.out.println(empStatus);
 int empHours=0;
 int employeeWage=0;
-if(empStatus==FULL_TIME)
+switch(empStatus)
 {
+	case FULL_TIME:
 	System.out.println("Employee is present full time");
 	empHours=FULL_DAY_HOUR;
-}
-else if(empStatus==PART_TIME)
-{
+	break;
+	case PART_TIME:
 	System.out.println("Employee is present half day");
 	empHours=HALF_DAY_HOUR;
-}
-else
-{
+	break;
+	default:
 	System.out.println("Employee is absent");
 }
 employeeWage=empHours*WAGE_PER_HOUR;
